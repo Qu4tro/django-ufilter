@@ -1,6 +1,6 @@
 .PHONY: clean-pyc clean-build docs clean
 ADDITIONAL_COVERAGE_FLAGS ?=
-INSTALL_FILE ?= requirements-dev.txt
+INSTALL_FILE ?= requirements/requirements-dev.txt
 INSTALL_LOG ?= /dev/stdout
 
 help:  ## show help
@@ -12,6 +12,9 @@ help:  ## show help
 install: ## install all requirements including for testing
 	pip install -r $(INSTALL_FILE) 2>&1 > $(INSTALL_LOG)
 	pip freeze
+
+install-quiet:  ## same as install but pipes all output to /dev/null
+	pip install -r $(INSTALL_FILE) > /dev/null
 
 clean: clean-build clean-pyc  ## remove all artifacts
 
