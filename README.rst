@@ -135,6 +135,7 @@ Available lookups:
     startswith: Match when string starts with given substring.
     week_day: Match by week day (1-Sunday to 7-Saturday) of the timestamp.
     year: Match by the year value of the timestamp.
+    len: Match the length of a given ArrayField
 
 Features
 --------
