@@ -69,8 +69,7 @@ class BaseFilterBackend(six.with_metaclass(abc.ABCMeta, object)):
         django-url-filter which need to be able to validate that the filterset
         will be able to filter given queryset. They can do that by comparing
         the model they are trying to filter matches the model the filterbackend
-        got. This primarily will have misconfigurations such as using
-        SQLAlchemy filterset to filter Django's ``QuerySet``.
+        got.
         """
         return self.get_model()
 

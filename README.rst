@@ -136,7 +136,7 @@ Features
   How URLs are parsed and how data is filtered is decoupled.
   This allows the actual filtering logic to be decoupled from Django
   hence filtering is possible not only with Django ORM QuerySet but
-  any set of data can be filtered (e.g. SQLAlchemy query objects)
+  any set of data can be filtered (e.g. plain Python objects)
   assuming corresponding filtering backend is implemented.
 
 * **Usage-agnostic**
