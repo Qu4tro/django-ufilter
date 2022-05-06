@@ -1,5 +1,6 @@
 include *.rst *.txt
 recursive-include docs *.rst conf.py Makefile make.bat
+recursive-include requirements *.txt
 
 exclude .drone.yml
 exclude .editorconfig

@@ -1,5 +1,3 @@
--r requirements.txt
--r requirements-release.txt
 black; python_version > "3.6"
 coreapi
 coverage
