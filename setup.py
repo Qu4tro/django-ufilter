@@ -20,10 +20,8 @@ licence = read("LICENSE.rst")
 readme = read("README.rst")
 
 req = read("requirements.txt").splitlines()
-dev_req = read("requirements-dev.txt").splitlines()[2:]
 
 requirements = req + ["setuptools"]
-test_requirements = req + dev_req
 
 description = " - ".join(
     [
@@ -42,8 +40,6 @@ setup(
     license="MIT",
     packages=find_packages(exclude=["test_project*", "tests*"]),
     install_requires=requirements,
-    test_suite="tests",
-    tests_require=test_requirements,
     keywords=" ".join(["django django-rest-framework"]),
     classifiers=[
         "Intended Audience :: Developers",
