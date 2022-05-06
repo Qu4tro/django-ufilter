@@ -43,7 +43,8 @@ class DjangoFilterBackend(BaseFilterBackend):
                   fields = ['fields1', ...]
     * ``filter_class_meta_kwargs`` - additional kwargs which should be passed
       in ``Meta`` for the generated :class:`.FilterSet`.
-    * ``filter_class_default`` - base class to use while creating new :class:`.FilterSet`.
+    * ``filter_class_default`` - base class to use while creating a
+      new :class:`.FilterSet`.
       This is primarily useful when using non-Django data-sources.
       By default :attr:`.default_filter_set` is used.
     """
@@ -148,9 +149,10 @@ class DjangoFilterBackend(BaseFilterBackend):
             filter_model = getattr(_filter.Meta, "model", None)
             if filter_model and _filter.filter_backend.enforce_same_models:
                 model = _filter.filter_backend.model
-                assert issubclass(model, filter_model), (
-                    "FilterSet model {} does not match queryset model {}"
-                    "".format(filter_model, model)
+                assert issubclass(
+                    model, filter_model
+                ), "FilterSet model {} does not match queryset model {}" "".format(
+                    filter_model, model
                 )
 
             try:

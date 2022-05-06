@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 'master'
+    rev: v4.2.0
     hooks:
       - id: check-added-large-files
         args: [--maxkb=1024]
@@ -20,25 +20,28 @@ repos:
       - id: debug-statements
       - id: end-of-file-fixer
       - id: fix-encoding-pragma
-      - id: flake8
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  - repo: https://github.com/miki725/importanize
-    rev: 'master'
+  - repo: https://github.com/pycqa/flake8
+    rev: '4.0.1'
     hooks:
-      - id: importanize
-        language_version: python3
+      - id: flake8
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
 
   - repo: https://github.com/python/black
-    rev: 'master'
+    rev: '22.3.0'
     hooks:
       - id: black
-        args: [--line-length=88, --safe]
+        args: [--safe]
         language_version: python3
         exclude: test_data/.*$
 
   - repo: https://github.com/mgedmin/check-manifest
-    rev: 'master'
+    rev: '0.48'
     hooks:
       - id: check-manifest

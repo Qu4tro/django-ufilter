@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function, unicode_literals
+
 import abc
 import re
 from collections import defaultdict
@@ -17,7 +18,6 @@ from ..constants import StrictMode
 from ..exceptions import Empty, SkipFilter
 from ..filters import BaseFilter
 from ..utils import LookupConfig
-
 
 __all__ = ["FilterSet", "FilterSetOptions", "ModelFilterSetOptions"]
 
@@ -122,7 +122,8 @@ class FilterSet(six.with_metaclass(FilterSetMeta, BaseFilter)):
         object from the Django view.
     strict_mode : str, optional
         Strict mode how :class:`.FilterSet` should behave when any validation
-        fails. See :class:`url_filter.constants.StrictMode` doc for more information.
+        fails. See :class:`django_ufilter.constants.StrictMode` doc for more
+        information.
         Default is ``empty``.
     """
 
