@@ -1,7 +1,6 @@
 -r requirements.txt
 -r requirements-release.txt
 black; python_version > "3.6"
-coreapi
 coverage
 django-debug-toolbar
 django-extensions

@@ -11,5 +11,4 @@ Submodules
 
 .. toctree::
 
-   url_filter.integrations.drf
-   url_filter.integrations.drf_coreapi
+   django_ufilter.integrations.drf
