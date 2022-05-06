@@ -10,14 +10,14 @@ from ..filtersets import ModelFilterSet
 
 class DjangoFilterBackend(BaseFilterBackend):
     """
-    DRF filter backend which integrates with ``django-url-filter``
+    DRF filter backend which integrates with ``django-ufilter``
 
     This integration backend can be specified in global DRF settings::
 
         # settings.py
         REST_FRAMEWORK = {
             'DEFAULT_FILTER_BACKENDS': [
-                'url_filter.integrations.drf.DjangoFilterBackend',
+                'django_ufilter.integrations.drf.DjangoFilterBackend',
             ]
         }
 
@@ -49,7 +49,7 @@ class DjangoFilterBackend(BaseFilterBackend):
 
     See Also
     --------
-    :py:class:`url_filter.integrations.drf_coreapi.CoreAPIURLFilterBackend`
+    :py:class:`django_ufilter.integrations.drf_coreapi.CoreAPIURLFilterBackend`
     """
 
     default_filter_set = ModelFilterSet

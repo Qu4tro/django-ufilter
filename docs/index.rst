@@ -1,5 +1,5 @@
 =================
-Django URL Filter
+Django UFilter
 =================
 
 Contents

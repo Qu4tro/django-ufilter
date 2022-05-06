@@ -52,7 +52,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Django URL Filter"
+project = "Django UFilter"
 copyright = "2015, Miroslav Shubernetskiy"
 author = "Miroslav Shubernetskiy"
 
@@ -206,7 +206,7 @@ html_static_path = ["_static"]
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "DjangoURLFilterdoc"
+htmlhelp_basename = "DjangoUFilterdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -227,8 +227,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "DjangoURLFilter.tex",
-        "Django URL Filter Documentation",
+        "DjangoUFilter.tex",
+        "Django UFilter Documentation",
         "Miroslav Shubernetskiy",
         "manual",
     )
@@ -259,9 +259,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, "djangourlfitler", "Django URL Filter Documentation", [author], 1)
-]
+man_pages = [(master_doc, "djangoufitler", "Django UFilter Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -275,10 +273,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "DjangoURLFilter",
-        "Django URL Filter Documentation",
+        "DjangoUFilter",
+        "Django UFilter Documentation",
         author,
-        "DjangoURLFilter",
+        "DjangoUFilter",
         "One line description of project.",
         "Miscellaneous",
     )

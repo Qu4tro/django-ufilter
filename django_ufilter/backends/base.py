@@ -67,7 +67,7 @@ class BaseFilterBackend(six.with_metaclass(abc.ABCMeta, object)):
         Property for getting model on which this filter backend operates.
 
         This is meant to be used by the integrations directly shipped with
-        django-url-filter which need to be able to validate that the filterset
+        django-ufilter which need to be able to validate that the filterset
         will be able to filter given queryset. They can do that by comparing
         the model they are trying to filter matches the model the filterbackend
         got.
