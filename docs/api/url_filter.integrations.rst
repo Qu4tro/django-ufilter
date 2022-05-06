@@ -1,7 +1,7 @@
 url\_filter.integrations package
 ================================
 
-.. automodule:: url_filter.integrations
+.. automodule:: django_ufilter.integrations
     :members:
     :undoc-members:
     :show-inheritance:

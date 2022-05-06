@@ -4,12 +4,12 @@ Usage
 Vanilla
 -------
 
-In its simplest form, Django URL Filter usage revolves around :class:`.FilterSet`.
+In its simplest form, Django UFilter usage revolves around :class:`.FilterSet`.
 They can be used manually::
 
     from django import forms
-    from url_filter.filters import Filter
-    from url_filter.filtersets import FilterSet
+    from django_ufilter.filters import Filter
+    from django_ufilter.filtersets import FilterSet
 
     class ProfileFilterSet(FilterSet):
         lives_in_country = Filter(form_field=forms.CharField())
@@ -41,12 +41,12 @@ Notable things to mention from above:
 Django
 ------
 
-Instead of manually creating :class:`.FilterSet`, Django URL Filter comes with
+Instead of manually creating :class:`.FilterSet`, Django UFilter comes with
 :class:`.ModelFilterSet` which greatly simplifies the task::
 
 
     from django import forms
-    from url_filter.filtersets import ModelFilterSet
+    from django_ufilter.filtersets import ModelFilterSet
 
     class UserFilterSet(ModelFilterSet):
         class Meta(object):
@@ -70,14 +70,14 @@ Notable things:
 Plain Filtering
 ---------------
 
-In addition to supporting regular ORMs ``django-url-filter`` also allows to
+In addition to supporting regular ORMs ``django-ufilter`` also allows to
 filter plain Python lists of either objects or dictionaries. This feature
 is primarily meant to filter data-sources without direct filtering support
 such as lists of data in redis. For example::
 
     from django import forms
-    from url_filter.backend.plain import PlainFilterBackend
-    from url_filter.filtersets.plain import PlainModelFilterSet
+    from django_ufilter.backend.plain import PlainFilterBackend
+    from django_ufilter.filtersets.plain import PlainModelFilterSet
 
     class UserFilterSet(PlainModelFilterSet):
         filter_backend_class = PlainFilterBackend
@@ -100,7 +100,7 @@ such as lists of data in redis. For example::
 Integrations
 ------------
 
-Django URL Filters tries to be usage-agnostic and does not assume
+Django UFilters tries to be usage-agnostic and does not assume
 how :class:`.FilterSet` is being used in the application. It does however
 ship with some common integrations to simplify common workflows.
 
@@ -122,14 +122,14 @@ Django Class Based Views
 Django REST Framework
 +++++++++++++++++++++
 
-Django URL Filter can rather easily be integrated with DRF.
-For that, a DRF-specific filter backend :class:`DjangoFilterBackend <url_filter.integrations.drf.DjangoFilterBackend>`
+Django UFilter can rather easily be integrated with DRF.
+For that, a DRF-specific filter backend :class:`DjangoFilterBackend <django_ufilter.integrations.drf.DjangoFilterBackend>`
 is implemented and can be used in settings::
 
     # settings.py
     REST_FRAMEWORK = {
         'DEFAULT_FILTER_BACKENDS': [
-            'url_filter.integrations.drf.DjangoFilterBackend',
+            'django_ufilter.integrations.drf.DjangoFilterBackend',
         ]
     }
 
@@ -155,4 +155,4 @@ control over :class:`.FilterSet` is required, it can be set explicitly::
         filter_class = MyFilterSet
 
 For more available options, please refer to
-:class:`DjangoFilterBackend <url_filter.integrations.drf.DjangoFilterBackend>` documentation.
+:class:`DjangoFilterBackend <django_ufilter.integrations.drf.DjangoFilterBackend>` documentation.
