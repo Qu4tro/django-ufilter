@@ -100,8 +100,8 @@ It takes a list of filter specifications and a data to filter and its
 job is to filter that data as specified in the specifications.
 
 .. note::
-  Currently we only support a handful of backends such as Django ORM,
-  SQLAlchemy and plain Python interables filter backends
+  Currently we only support a handful of backends such as Django ORM
+  and plain Python interables filter backends
   but you can imagine that any backend can be implemented.
   Eventually filter backends can be added for more exotic sources
   like Mongo, Redis, etc.
