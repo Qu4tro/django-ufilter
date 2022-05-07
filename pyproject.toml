@@ -62,6 +62,7 @@ pre-commit-hooks = "^4.2.0"
 sphinx = "~4.3.0"
 sphinx-autobuild = "^2021.3.14"
 sphinx-rtd-theme = "^1.0.0"
+bumpver = "^2022.1116"
 
 [tool.isort]
 profile = "black"
@@ -72,4 +73,21 @@ addopts = "-sv --doctest-modules --cov=django_ufilter --cov-report=term-missing:
 testpaths = [
     "tests",
     "django_ufilter",
+]
+
+
+[tool.bumpver]
+current_version = "0.4.0"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'version = "{pep440_version}"',
+]
+"django_ufilter/__init__.py" = [
+    '__version__ = "{pep440_version}"',
 ]

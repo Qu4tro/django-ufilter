@@ -120,6 +120,21 @@ urwid = ["urwid"]
 watch = ["watchdog"]
 
 [[package]]
+name = "bumpver"
+version = "2022.1116"
+description = "Bump version numbers in project files."
+category = "dev"
+optional = false
+python-versions = ">=2.7"
+
+[package.dependencies]
+click = {version = "*", markers = "python_version >= \"3.6\""}
+colorama = ">=0.4"
+lexid = "*"
+pathlib2 = "*"
+toml = "*"
+
+[[package]]
 name = "cached-property"
 version = "1.5.2"
 description = "A decorator for caching properties in classes."
@@ -458,6 +473,14 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "lexid"
+version = "2021.1006"
+description = "Variable width build numbers with lexical ordering."
+category = "dev"
+optional = false
+python-versions = ">=2.7"
+
+[[package]]
 name = "livereload"
 version = "2.6.3"
 description = "Python LiveReload is an awesome tool for web developers"
@@ -524,6 +547,17 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
+
+[[package]]
+name = "pathlib2"
+version = "2.3.7.post1"
+description = "Object-oriented filesystem paths"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
 
 [[package]]
 name = "pathspec"
@@ -1065,7 +1099,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<4.0"
-content-hash = "9a41acc4248e072cd083d651dbc78c745161d78653d88513b5d05fb057407c76"
+content-hash = "fd6a59ac69d1a89b1ff322c1ecbb0f958b824266879a6d5603cccf62e1216f4e"
 
 [metadata.files]
 alabaster = [
@@ -1125,6 +1159,10 @@ blessings = [
 bpython = [
     {file = "bpython-0.22.1-py3-none-any.whl", hash = "sha256:27ab07d64b9f0268990612aa5c1ab7be8705aa819b14b72c9e4b3b0418458937"},
     {file = "bpython-0.22.1.tar.gz", hash = "sha256:1fb1e0a52332579fc4e3dcf75e21796af67aae2be460179ecfcce9530a49a200"},
+]
+bumpver = [
+    {file = "bumpver-2022.1116-py2.py3-none-any.whl", hash = "sha256:4c87e85faf9bc04a696f4ba85b76bcec9045f6e86c4ba5a8a1bbf2364d32daea"},
+    {file = "bumpver-2022.1116.tar.gz", hash = "sha256:8851504c7b6b8406f7e91c650b4453fe516f01aafb0532dd55f9c8e3a5ba2df9"},
 ]
 cached-property = [
     {file = "cached-property-1.5.2.tar.gz", hash = "sha256:9fa5755838eecbb2d234c3aa390bd80fbd3ac6b6869109bfc1b499f7bd89a130"},
@@ -1362,6 +1400,10 @@ jinja2 = [
     {file = "Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
     {file = "Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
 ]
+lexid = [
+    {file = "lexid-2021.1006-py2.py3-none-any.whl", hash = "sha256:5526bb5606fd74c7add23320da5f02805bddd7c77916f2dc1943e6bada8605ed"},
+    {file = "lexid-2021.1006.tar.gz", hash = "sha256:509a3a4cc926d3dbf22b203b18a4c66c25e6473fb7c0e0d30374533ac28bafe5"},
+]
 livereload = [
     {file = "livereload-2.6.3.tar.gz", hash = "sha256:776f2f865e59fde56490a56bcc6773b6917366bce0c267c60ee8aaf1a0959869"},
 ]
@@ -1426,6 +1468,10 @@ nodeenv = [
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
     {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
+]
+pathlib2 = [
+    {file = "pathlib2-2.3.7.post1-py2.py3-none-any.whl", hash = "sha256:5266a0fd000452f1b3467d782f079a4343c63aaa119221fbdc4e39577489ca5b"},
+    {file = "pathlib2-2.3.7.post1.tar.gz", hash = "sha256:9fe0edad898b83c0c3e199c842b27ed216645d2e177757b2dd67384d4113c641"},
 ]
 pathspec = [
     {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
