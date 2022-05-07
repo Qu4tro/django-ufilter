@@ -4,9 +4,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-ufilter"
-version = "2022.05.06"
+version = "0.4.0"
 license = "MIT"
-include = ["AUTHORS.rst", "HISTORY.rst", "docs"]
+include = ["AUTHORS.md", "CHANGELOG.md", "docs"]
 description = """
   Django UFilter provides a safe way to filter data via human-friendly URLs.
   A fork from django-url-filter.
