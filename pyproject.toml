@@ -32,8 +32,6 @@ django = [
     {version = "^3.2", python = "<=3.9"},
 ]
 cached-property = "^1.5.2"
-enum-compat = "^0.0.3"
-six = "^1.16.0"
 
 [tool.poetry.dev-dependencies]
 bpython = "^0.22.1"
