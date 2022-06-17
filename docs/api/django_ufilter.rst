@@ -1,5 +1,5 @@
-url\_filter package
-===================
+django_ufilter package
+===============================
 
 .. automodule:: django_ufilter
     :members:
@@ -20,7 +20,6 @@ Submodules
 
 .. toctree::
 
-   django_ufilter.constants
    django_ufilter.exceptions
    django_ufilter.fields
    django_ufilter.filters

@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 import inspect
 from contextlib import contextmanager
 
@@ -27,7 +24,7 @@ class FilterSpec(object):
         to be used in filtering of the queryset.
         For example lookup config with key
         ``user__profile__email`` will have components of
-        ``['user', 'profile', 'email'].
+        ``['user', 'profile', 'email']``.
     lookup : str
         Name of the lookup how final key/attribute from
         :attr:`.components` should be compared.

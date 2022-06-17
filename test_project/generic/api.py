@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 from rest_framework import serializers
 from rest_framework.viewsets import ModelViewSet
 
-from django_ufilter.integrations.drf import DjangoFilterBackend
+from django_ufilter.integrations.drf import DRFFilterBackend
 
 from .models import ModelA, ModelB
 
@@ -24,12 +21,12 @@ class ModelBSerializer(serializers.ModelSerializer):
 class ModelAViewSet(ModelViewSet):
     serializer_class = ModelASerializer
     queryset = ModelA.objects.all()
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DRFFilterBackend]
     filter_fields = ["name", "rel_b"]
 
 
 class ModelBViewSet(ModelViewSet):
     serializer_class = ModelBSerializer
     queryset = ModelB.objects.all()
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DRFFilterBackend]
     filter_fields = []

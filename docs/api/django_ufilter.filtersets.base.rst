@@ -1,5 +1,5 @@
-url\_filter.filtersets.base module
-==================================
+django_ufilter.filtersets.base module
+==============================================
 
 .. automodule:: django_ufilter.filtersets.base
     :members:

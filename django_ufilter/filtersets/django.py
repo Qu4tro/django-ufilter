@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 import operator
 
 from django import forms
@@ -33,7 +30,7 @@ MODEL_FIELD_OVERWRITES = SubClassDict(
 
 class DjangoModelFilterSetOptions(ModelFilterSetOptions):
     """
-    Custom options for ``FilterSet``s used for Django models.
+    Custom options for FilterSets used for Django models.
 
     Attributes
     ----------

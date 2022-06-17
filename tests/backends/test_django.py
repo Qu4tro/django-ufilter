@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 import mock
 
 from django_ufilter.backends.django import DjangoFilterBackend

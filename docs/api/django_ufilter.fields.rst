@@ -1,5 +1,5 @@
-url\_filter.fields module
-=========================
+django_ufilter.fields module
+=====================================
 
 .. automodule:: django_ufilter.fields
     :members:

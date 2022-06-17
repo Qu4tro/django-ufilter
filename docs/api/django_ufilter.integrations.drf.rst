@@ -1,5 +1,5 @@
-url\_filter.integrations.drf module
-===================================
+django_ufilter.integrations.drf module
+===============================================
 
 .. automodule:: django_ufilter.integrations.drf
     :members:

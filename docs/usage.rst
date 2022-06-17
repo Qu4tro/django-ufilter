@@ -123,13 +123,13 @@ Django REST Framework
 +++++++++++++++++++++
 
 Django UFilter can rather easily be integrated with DRF.
-For that, a DRF-specific filter backend :class:`DjangoFilterBackend <django_ufilter.integrations.drf.DjangoFilterBackend>`
+For that, a DRF-specific filter backend :class:`DRFFilterBackend <django_ufilter.integrations.drf.DRFFilterBackend>`
 is implemented and can be used in settings::
 
     # settings.py
     REST_FRAMEWORK = {
         'DEFAULT_FILTER_BACKENDS': [
-            'django_ufilter.integrations.drf.DjangoFilterBackend',
+            'django_ufilter.integrations.drf.DRFFilterBackend',
         ]
     }
 
@@ -138,7 +138,7 @@ or manually set in the viewset::
     class MyViewSet(ModelViewSet):
         queryset = MyModel.objects.all()
         serializer_class = MyModelSerializer
-        filter_backends = [DjangoFilterBackend]
+        filter_backends = [DRFFilterBackend]
         filter_fields = ['field1', 'field2']
 
 Note in the example above, fields to be filtered on are explicitly
@@ -151,8 +151,8 @@ control over :class:`.FilterSet` is required, it can be set explicitly::
     class MyViewSet(ModelViewSet):
         queryset = MyModel.objects.all()
         serializer_class = MyModelSerializer
-        filter_backends = [DjangoFilterBackend]
+        filter_backends = [DRFFilterBackend]
         filter_class = MyFilterSet
 
 For more available options, please refer to
-:class:`DjangoFilterBackend <django_ufilter.integrations.drf.DjangoFilterBackend>` documentation.
+:class:`DRFFilterBackend <django_ufilter.integrations.drf.DRFFilterBackend>` documentation.

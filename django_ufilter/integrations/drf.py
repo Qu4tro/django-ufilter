@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 from django.core.exceptions import ValidationError as DjangoValidationError
 from rest_framework.exceptions import ValidationError
 from rest_framework.filters import BaseFilterBackend
@@ -8,7 +5,7 @@ from rest_framework.filters import BaseFilterBackend
 from ..filtersets import ModelFilterSet
 
 
-class DjangoFilterBackend(BaseFilterBackend):
+class DRFFilterBackend(BaseFilterBackend):
     """
     DRF filter backend which integrates with ``django-ufilter``
 
@@ -17,7 +14,7 @@ class DjangoFilterBackend(BaseFilterBackend):
         # settings.py
         REST_FRAMEWORK = {
             'DEFAULT_FILTER_BACKENDS': [
-                'django_ufilter.integrations.drf.DjangoFilterBackend',
+                'django_ufilter.integrations.drf.DRFFilterBackend',
             ]
         }
 
@@ -25,7 +22,7 @@ class DjangoFilterBackend(BaseFilterBackend):
 
         class MyViewSet(ModelViewSet):
             queryset = MyModel.objects.all()
-            filter_backends = [DjangoFilterBackend]
+            filter_backends = [DRFFilterBackend]
             filter_fields = ['field1', 'field2']
 
     The following attributes can be specified on the view:
@@ -62,7 +59,7 @@ class DjangoFilterBackend(BaseFilterBackend):
         ----------
         view : View
             DRF view/viewset where this filter backend is being used.
-            Please refer to :class:`.DjangoFilterBackend` documentation
+            Please refer to :class:`.DRFFilterBackend` documentation
             for list of attributes which can be supplied in view
             to customize how filterset will be determined.
         queryset
@@ -163,4 +160,4 @@ class DjangoFilterBackend(BaseFilterBackend):
         return queryset
 
 
-URLFilterBackend = DjangoFilterBackend
+URLFilterBackend = DRFFilterBackend

@@ -1,1 +1,5 @@
-.. include:: ../HISTORY.rst
+=================
+Changelog
+=================
+
+.. mdinclude:: ../CHANGELOG.md

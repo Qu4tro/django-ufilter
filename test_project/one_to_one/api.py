@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import print_function, unicode_literals
-
 from django import forms
 from django.http import Http404
 from rest_framework.response import Response

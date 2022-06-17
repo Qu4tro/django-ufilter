@@ -1,5 +1,5 @@
-url\_filter.integrations package
-================================
+django_ufilter.integrations package
+============================================
 
 .. automodule:: django_ufilter.integrations
     :members:

@@ -1,5 +1,5 @@
-url\_filter.filtersets.plain module
-===================================
+django_ufilter.filtersets.plain module
+===============================================
 
 .. automodule:: django_ufilter.filtersets.plain
     :members:

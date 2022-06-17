@@ -1,5 +1,5 @@
-url\_filter.validators module
-=============================
+django_ufilter.validators module
+=========================================
 
 .. automodule:: django_ufilter.validators
     :members:

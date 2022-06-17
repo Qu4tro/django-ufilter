@@ -1,5 +1,5 @@
 django_ufilter
-==========
+===================
 
 .. toctree::
    :maxdepth: 4

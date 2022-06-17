@@ -2,25 +2,21 @@
 Django UFilter
 =================
 
-.. image:: https://badge.fury.io/py/django-url-filter.svg
-   :target: http://badge.fury.io/py/django-url-filter
-.. image:: https://readthedocs.org/projects/django-url-filter/badge/?version=latest
-   :target: http://django-url-filter.readthedocs.io/en/latest/?badge=latest
-.. image:: https://drone.miki725.com/api/badges/miki725/django-url-filter/status.svg
-   :target: https://drone.miki725.com/miki725/django-url-filter
-.. image:: https://codecov.io/gh/miki725/django-url-filter/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/miki725/django-url-filter
+.. image:: https://badge.fury.io/py/django-ufilter.svg
+   :target: http://badge.fury.io/py/django-ufilter
+.. image:: https://readthedocs.org/projects/django-ufilter/badge/?version=latest
+   :target: http://django-ufilter.readthedocs.io/en/latest/?badge=latest
 
 Django UFilter provides a safe way to filter data via human-friendly URLs.
 
 * Free software: MIT license
-* GitHub: https://github.com/miki725/django-url-filter
-* Documentation: http://django-url-filter.readthedocs.io/
+* GitHub: https://github.com/Qu4tro/django-ufilter/
+* Documentation: http://django-ufilter.readthedocs.io/
 
 Overview
 --------
 
-The main goal of Django URL Filter is to provide an easy URL interface
+The main goal of Django UFilter is to provide an easy URL interface
 for filtering data. It allows the user to safely filter by model
 attributes and also allows to specify the lookup type for each filter
 (very much like Django's filtering system in ORM).
@@ -30,7 +26,7 @@ For example the following will retrieve all items where the id is
 
     example.com/listview/?id=5&title__contains=foo
 
-In addition to basic lookup types, Django URL Filter allows to
+In addition to basic lookup types, Django UFilter allows to
 use more sophisticated lookups such as ``in`` or ``year``.
 For example::
 
@@ -53,12 +49,12 @@ Easiest way to install this library is by using ``pip``::
 Usage Example
 -------------
 
-To make example short, it demonstrates Django URL Filter integration
+To make example short, it demonstrates Django UFilter integration
 with Django REST Framework but it can be used without DRF (see below).
 
 ::
 
-  from django_ufilter.integrations.drf import DjangoFilterBackend
+  from django_ufilter.integrations.drf import DRFFilterBackend
 
 
   class UserViewSet(ModelViewSet):
@@ -82,7 +78,7 @@ to filter querysets::
   fs = UserFilterSet(data=query, queryset=User.objects.all())
   filtered_users = fs.filter()
 
-Above will automatically allow the use of all of the Django URL Filter features.
+Above will automatically allow the use of all of the Django UFilter features.
 Some possibilities::
 
     # get user with id 5

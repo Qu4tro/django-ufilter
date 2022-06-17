@@ -1,5 +1,5 @@
-url\_filter.backends.django module
-==================================
+django_ufilter.backends.django module
+==============================================
 
 .. automodule:: django_ufilter.backends.django
     :members:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Bare ``settings.py`` for running tests for django_ufilter
 import os
 
@@ -52,7 +51,7 @@ TEMPLATES = [
 ROOT_URLCONF = "test_project.urls"
 
 REST_FRAMEWORK = {
-    "DEFAULT_FILTER_BACKENDS": ["django_ufilter.integrations.drf.DjangoFilterBackend"]
+    "DEFAULT_FILTER_BACKENDS": ["django_ufilter.integrations.drf.DRFFilterBackend"]
 }
 
 DEBUG_TOOLBAR_PANELS = [

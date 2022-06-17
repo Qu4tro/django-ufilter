@@ -1,5 +1,5 @@
-url\_filter.exceptions module
-=============================
+django_ufilter.exceptions module
+=========================================
 
 .. automodule:: django_ufilter.exceptions
     :members:

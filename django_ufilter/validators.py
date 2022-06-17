@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 from django.core.validators import MaxLengthValidator as _MaxLengthValidator
 from django.core.validators import MinLengthValidator as _MinLengthValidator
 from django.utils.deconstruct import deconstructible
