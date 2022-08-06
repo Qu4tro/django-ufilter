@@ -62,7 +62,7 @@ with Django REST Framework but it can be used without DRF (see below).
   class UserViewSet(ModelViewSet):
       queryset = User.objects.all()
       serializer_class = UserSerializer
-      filter_backends = [DjangoFilterBackend]
+      filter_backends = [DRFFilterBackend]
       filter_fields = ['username', 'email']
 
 Alternatively filterset can be manually created and used directly
