@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-ufilter"
-version = "0.4.0"
+version = "0.4.1"
 license = "MIT"
 include = ["AUTHORS.md", "CHANGELOG.md", "docs"]
 description = "django-ufilter provides a safe way to filter data."
@@ -68,7 +68,7 @@ testpaths = [
 
 
 [tool.bumpver]
-current_version = "0.4.0"
+current_version = "0.4.1"
 version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
 commit_message = "Bump version {old_version} -> {new_version}"
 commit = true
