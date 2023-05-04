@@ -9,6 +9,25 @@ This project was originally forked from [django-url-filter](https://github.com/m
 
 ## [Unreleased]
 
+## [0.4.3] - 2023-05-04
+
+### Added
+
+-   Support for Python3.11
+
+### Fixed
+
+-   README (Thanks @aseidma)
+-   CI - it had broke due to a django upgrade
+
+### Changed
+
+-   Do not enforce Django version according to the Python version (Thanks @arianesc)
+-   Upgraded Github Actions
+-   Upgraded Poetry
+-   Upgraded isort
+
+
 ## [0.4.0] - 2022-06-17
 
 ### Added
@@ -37,5 +56,6 @@ This project was originally forked from [django-url-filter](https://github.com/m
 -   `setup.py`, `setup.cfg`, `requirements*.txt`, `MANIFEST.in`, `Makefile`.
 -   `__author__` and `__email__` - These are already available on `pyproject.toml`.
 
-[Unreleased]: https://github.com/Qu4tro/django-ufilter/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/Qu4tro/django-ufilter/compare/v0.4.3...HEAD
+[0.4.3]: https://github.com/Qu4tro/django-ufilter/releases/tag/v0.4.3
 [0.4.0]: https://github.com/Qu4tro/django-ufilter/releases/tag/v0.4.0
