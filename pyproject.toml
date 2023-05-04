@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-ufilter"
-version = "0.4.0"
+version = "0.4.3"
 license = "MIT"
 include = ["AUTHORS.md", "CHANGELOG.md", "docs"]
 description = "django-ufilter provides a safe way to filter data."
