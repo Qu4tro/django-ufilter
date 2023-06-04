@@ -9,6 +9,10 @@ This project was originally forked from [django-url-filter](https://github.com/m
 
 ## [Unreleased]
 
+### Removed
+
+-   Support for Python3.7
+
 ## [0.4.3] - 2023-05-04
 
 ### Added
