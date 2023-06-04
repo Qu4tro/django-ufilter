@@ -30,9 +30,16 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install Poetry
-      uses: snok/install-poetry@v1
-      with:
-        version: 1.4.2
+      run: |
+        INSTALL_PATH="$HOME/.local"
+        INSTALLATION_SCRIPT="$(mktemp)"
+        VERSION=1.4.2
+        curl -sSL https://install.python-poetry.org/ --output "$INSTALLATION_SCRIPT"
+        POETRY_HOME=$INSTALL_PATH python3 "$INSTALLATION_SCRIPT" --yes --version="$VERSION"
+        echo "$INSTALL_PATH/bin" >> "$GITHUB_PATH"
+        export PATH="$INSTALL_PATH/bin:$PATH"
+        act="source .venv/bin/activate"
+        echo "VENV=.venv/bin/activate" >>"$GITHUB_ENV"
 
     - name: Install dependencies
       run: |
