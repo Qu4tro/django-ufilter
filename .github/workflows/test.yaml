@@ -35,7 +35,7 @@ jobs:
         INSTALLATION_SCRIPT="$(mktemp)"
         VERSION=1.4.2
         curl -sSL https://install.python-poetry.org/ --output "$INSTALLATION_SCRIPT"
-        POETRY_HOME=$INSTALL_PATH python3 "$INSTALLATION_SCRIPT" --yes --version="$VERSION"; cat /home/runner/work/django-ufilter/django-ufilter/poetry-installer-error*.log
+        POETRY_HOME=$INSTALL_PATH python3 "$INSTALLATION_SCRIPT" --yes --version="$VERSION"; cat /home/runner/work/django-ufilter/django-ufilter/poetry-installer-error*.log; echo "hey"
         echo "$INSTALL_PATH/bin" >> "$GITHUB_PATH"
         export PATH="$INSTALL_PATH/bin:$PATH"
         act="source .venv/bin/activate"
