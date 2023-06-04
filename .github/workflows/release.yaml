@@ -14,3 +14,4 @@ jobs:
         with:
           pypi_token: ${{ secrets.PYPI_TOKEN }}
           ignore_dev_requirements: True
+          poetry_version: 1.4.2
